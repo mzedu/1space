@@ -1,0 +1,60 @@
+{
+  "build": {
+    "beforeDevCommand": "",
+    "beforeBuildCommand": "",
+    "devPath": "../src",
+    "distDir": "../src",
+    "withGlobalTauri": true
+  },
+  "package": {
+    "productName": "1space",
+    "version": "0.0.0"
+  },
+  "tauri": {
+    "allowlist": {
+      "all": false,
+      "shell": {
+        "all": false,
+        "open": true
+      },
+      "http": {
+        "all": true,
+        "scope": [
+          "https://twitter.com/*",
+          "https://video.twimg.com/*",
+          "https://api.twitter.com/*",
+          "https://www.instagram.com/*",
+          "https://*.cdninstagram.com/*",
+          "https://www.threads.net/*",
+          "nocors://**"
+        ]
+      },
+      "os": {
+        "all": true
+      }
+    },
+    "bundle": {
+      "active": true,
+      "targets": "all",
+      "identifier": "com.1space.dev",
+      "icon": [
+        "icons/32x32.png",
+        "icons/128x128.png",
+        "icons/icon.png",
+        "icons/1space.ico"
+      ]
+    },
+    "security": {
+      "csp": null
+    },
+    "windows": [
+      {
+        "fullscreen": false,
+        "resizable": true,
+        "title": "1space",
+        "minWidth": 1172,
+        "minHeight": 800
+      }
+    ]
+  }
+}

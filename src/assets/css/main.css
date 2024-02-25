@@ -1,0 +1,201 @@
+body {
+    margin: 0;
+}
+
+* {
+    font-family: "Open Sans", sans-serif;
+}
+
+#container {
+    display: flex;
+    height: 100vh;
+    flex-direction: row;
+}
+
+#container > #left-container {
+    display: flex;
+    width: 30em;
+    flex-direction: column;
+
+}
+
+#left-container > #profile-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    height: 40%;
+
+    margin: 1em;
+}
+
+#profile-info > #pfp {
+    width: 35%;
+    
+    object-fit: contain;
+    border-radius: 50%;
+}
+
+#profile-info > #friendly-name {
+    margin: 0px;
+}
+
+#profile-info > #identifier {
+    margin: 0px;
+    opacity: 0.7;
+}
+
+#left-container > #navigation-buttons {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: start;
+    align-items: center;
+    margin-left: 0.6em;
+
+    height: 100%;
+}
+
+#navigation-buttons > div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    font-size: 1.6em;
+    margin: 0.7em;
+
+    padding: 20px;
+    padding-left: 25px;
+    padding-right: 25px;
+
+    background-color: white;
+    border-radius: 40px;
+
+    width: 70%;
+
+    transition: 0.3s;
+}
+
+#navigation-buttons > div:hover, #selected {
+    filter: invert(1);
+}
+
+#navigation-buttons > div > a {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    margin: 0;
+
+    pointer-events: visible;
+    user-select: none;
+    -webkit-user-select: none;
+    text-decoration: none;
+    color: black;
+}
+
+#navigation-buttons > div > #notification-count-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    width: 1em;
+    height: 1em;
+
+    margin: 0;
+    padding: 0.45em;
+    border-radius: 50%;
+
+    font-size: 0.75em;
+
+    background-color: black;
+    color: white;
+
+    pointer-events: none;
+    user-select: none;
+    -webkit-user-select: none;
+    text-decoration: none;
+}
+
+#navigation-buttons > div > a > .material-symbols-outlined {
+    font-size: 1em;
+    padding-right: 0.5em;
+}
+
+#container > #main-content {
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    height: 100vh;
+}
+
+#main-content > #title {
+    height: 5em;
+}
+
+.lds-ellipsis {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+    margin: 10px;
+}
+
+.lds-ellipsis div {
+    position: absolute;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background: #000;
+    animation-timing-function: cubic-bezier(0, 1, 1, 0);
+}
+
+.lds-ellipsis div:nth-child(1) {
+    left: 8px;
+    animation: lds-ellipsis1 0.6s infinite;
+}
+
+.lds-ellipsis div:nth-child(2) {
+    left: 8px;
+    animation: lds-ellipsis2 0.6s infinite;
+}
+
+.lds-ellipsis div:nth-child(3) {
+    left: 32px;
+    animation: lds-ellipsis2 0.6s infinite;
+}
+
+.lds-ellipsis div:nth-child(4) {
+    left: 56px;
+    animation: lds-ellipsis3 0.6s infinite;
+}
+
+@keyframes lds-ellipsis1 {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes lds-ellipsis3 {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(0);
+    }
+}
+
+@keyframes lds-ellipsis2 {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(24px, 0);
+    }
+}

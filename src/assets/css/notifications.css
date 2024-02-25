@@ -1,0 +1,32 @@
+#main-content > #notification-container {
+    overflow-y: auto;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: start;
+    justify-content: start;
+    
+    width: 100%;
+}
+
+#notification-container > .notification {
+    width: inherit;
+
+    display: flex;
+    flex-direction: row;
+
+    align-items: center;
+}
+
+.notification > .notification-icon {
+    height: 3.5em;
+    object-fit: contain;
+    border-radius: 50%;
+    margin: 1em;
+}
+
+.notification > * {
+    margin-left: 2em;
+    margin-right: 2em;
+}

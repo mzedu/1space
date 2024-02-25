@@ -1,0 +1,265 @@
+#main-content > #posts {
+    overflow-y: auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.post {
+    background-color: #f0f0f2;
+    padding: 0.4em;
+    margin: 0.4em;
+    border-radius: 10px;
+    width: 45em;
+}
+
+.post-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.post-header > .post-user-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+}
+
+.post-user-info > .post-pfp-container {
+    display: flex;
+    flex-direction: row;
+
+    align-items: end;
+}
+
+.post-pfp-container > .post-pfp {
+    height: 4em;
+    object-fit: contain;
+    border-radius: 50%;
+}
+
+.post-pfp-container > .post-platform-icon {
+    position: relative;
+    left: -1.5em;
+
+    height: 1.5em;
+    object-fit: contain;
+    border-radius: 50%;
+}
+
+.post-user-info > .post-name-container {
+    display: flex;
+    flex-direction: column;
+
+    align-items: start;
+}
+
+.post-name-container > h3, p {
+    margin: 0;
+}
+
+.post-header > .post-info {
+    opacity: 0.8;
+}
+
+.post > .post-content {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+}
+
+.post-content > .post-media {
+    align-self: center;
+    margin: 15px;
+    border-radius: 4px;
+    margin-bottom: 0px;
+
+    max-height: 35em;
+    max-width: 100%;
+}
+
+.post > .post-footer {
+    display: flex;
+    flex-direction: row;
+
+    justify-content: start;
+
+    margin-left: 15px;
+}
+
+.post-footer > div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 15px;
+
+    user-select: none;
+    -webkit-user-select: none;
+    cursor: pointer;
+
+    width: 5em;
+
+    padding: 2px;
+}
+
+.post-footer {
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+.post-footer > div > .material-symbols-outlined {
+    padding: 2px;
+}
+
+/* filling google material icons doesnt work for some reason so this'll have to do */
+.post-footer > div > .activated {
+    filter: invert(1);
+
+    background-color: white;
+    border-radius: 6px;
+}
+
+#error-container {
+    display: flex; /* redundant (see home.js:19) but it's here for readability */
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+}
+
+#error-container > button {
+    font-size: 1.3em;
+    padding: 0.4em;
+    margin: 0.6em;
+
+    border-radius: 30px;
+    border-style: none;
+
+    cursor: pointer;
+
+    color: black;
+    background-color: white;
+
+    transition: 0.3s;
+}
+
+#error-container > button:hover {
+    filter: invert(1);
+}
+
+#posts > #post-creation {
+    display: flex;
+    flex-direction: row;
+
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: #ececee;
+    border-radius: 10px;
+
+    padding: 0.4em;
+    padding-left: 2em;
+    padding-right: 2em;
+
+    margin: 0.4em;
+
+    width: 45em;
+}
+
+#post-creation > img {
+    width: 10%;
+    
+    object-fit: contain;
+    border-radius: 50%;
+}
+
+#post-creation > textarea {
+    margin: 5px;
+    padding: 5px;
+
+    font-size: 1em;
+
+    background: #fff;
+    border: none;
+    border-radius: 5px;
+
+    width: 50%;
+
+    resize: none;
+}
+
+#post-creation > #pc-controls {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+}
+
+#pc-controls > button {
+    border-radius: 50%;
+    border: none;
+
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#pc-controls > button:hover {
+    filter: invert(1);
+}
+
+#pc-controls > #pc-select-dropdown {
+    border-radius: 5px;
+    background-color: #fafafc;
+    padding: 3px;
+    margin: 10px;
+
+    user-select: none;
+    -webkit-user-select: none;
+    cursor: default;
+}
+
+#pc-select-dropdown > p {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#pc-select-dropdown > .hovered {
+    display: none;
+
+    position: absolute;
+}
+
+#pc-select-dropdown:hover > .hovered {
+    display: flex;
+    flex-direction: column;
+}
+
+#pc-select-dropdown:hover > .hovered > div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    background-color: #fafafc;
+
+    padding: 3px;
+
+    width: inherit;
+}
+
+#pc-select-dropdown:hover > .hovered > div:first-child {
+    border-top-right-radius: 5px;
+}
+
+#pc-select-dropdown:hover > .hovered > div:last-child {
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}

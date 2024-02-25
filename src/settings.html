@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1space - settings</title>
+    <script type="text/javascript" src="assets/js/purify.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/platforms/generic.js"></script>
+    <script src="assets/js/platforms/twitter.js"></script>
+    <script src="assets/js/platforms/instagram.js"></script>
+    <script src="assets/js/platforms/threads.js"></script>
+    <script src="assets/js/main-lib.js"></script>
+    <script src="assets/js/settings.js"></script>
+
+    <link href="assets/css/main.css" rel="stylesheet">
+    <link href="assets/css/settings.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="container">
+        <div id="left-container">
+            <div id="profile-info">
+                <img src="assets/placeholder_pfp.jpeg" id="pfp">
+
+                <h2 id="friendly-name">Unknown</h2>
+                <p id="identifier">@unknown</p>
+            </div>
+            <div id="navigation-buttons">
+                <div><a href="/home.html"><span class="material-symbols-outlined">home</span>Home</a></div>
+                <div>
+                    <a href="/notifications.html">
+                        <span class="material-symbols-outlined">notifications</span>
+                        Notifications
+                    </a>
+                    <div id="notification-count-container" style="display: none;"><p id="notification-count"></p></div>
+                </div>
+                <div id="selected"><a href="#"><span class="material-symbols-outlined">settings</span>Settings</a></div>
+            </div>
+        </div>
+
+        <div id="main-content">
+            <div id="title">
+                <h1>Settings</h1>
+            </div>
+
+            <div id="settings-tab">
+                <div class="settings-container" id="accounts-settings" name="accounts">
+                    <div id="accounts-header">
+                        <h2>Accounts</h2>
+                        <button id="add-account" onclick="openPrompt();"><span class="material-symbols-outlined">add</span></button>
+                    </div>
+                    <div id="account-list">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="add-account-container" style="display: none;">
+        <div id="aa-background"></div>
+        <div id="aa-prompt">
+            <h1>Add account</h1>
+            <div id="platform-select-container">
+                <p>Platform</p>
+                <select id="platform-select" onchange="updateAccountPrompt();">
+                    <option value="twitter">Twitter</option>
+                    <option value="instagram">Instagram</option>
+                    <option value="threads">Threads</option>
+                </select>
+            </div>
+
+            <div id="platform-twitter" class="platform-values" style="display: inline-block;">
+                <div>
+                    <input type="text" placeholder="Username" id="twitter-username">
+                    <input type="text" placeholder="Email" id="twitter-email">
+                    <input type="password" placeholder="Password" id="twitter-password">
+                </div>
+            </div>
+
+            <div id="platform-instagram" class="platform-values" style="display: none;">
+                <div>
+                    <input type="text" placeholder="Username" id="instagram-username">
+                    <input type="password" placeholder="Password" id="instagram-password">
+                </div>
+            </div>
+
+            <div id="platform-threads" class="platform-values" style="display: none;">
+                <div>
+                    <input type="text" placeholder="Username" id="threads-username">
+                    <input type="password" placeholder="Password" id="threads-password">
+                </div>
+            </div>
+
+            <div style="display: none;" class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
+
+            <p id="aa-error"></p>
+
+            <div id="prompt-btns">
+                <button onclick="addAccountFromPrompt();">Add</button>
+                <button onclick="closePrompt();">Cancel</button>
+            </div>
+        </div>
+    </div>
+</body>
+<template id="account-template">
+    <div class="account">
+        <div class="account-details">
+            <div class="account-pfp-container">
+                <img src="" class="account-pfp">
+                <img src="" class="account-platform-icon">
+            </div>
+            <div class="account-name-container">
+                <h3 class="account-name"></h3>
+                <p class="account-identifier"></p>
+            </div>
+        </div>
+        <div class="account-btns">
+            <p class="invalid-warning"><span class="material-symbols-outlined">error</span></p>
+            <button class="make-main-btn"><span class="material-symbols-outlined">star</span></button>
+            <button class="remove-btn"><span class="material-symbols-outlined">close</span></button>
+        </div>
+    </div>
+</template>
+</html>

@@ -1,0 +1,244 @@
+#main-content > #settings-tab {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    width: 100%;
+}
+
+#settings-tab > #subsetting-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    min-width: 25%;
+
+    /*
+    border-image: linear-gradient(90deg, #eaeaea, #fff) 100;
+    border-width: 4px;
+    border-style: solid;
+    border-left: 0;
+    border-top: 0;
+    border-bottom: 0;
+    */
+}
+
+button:hover {
+    filter: invert(1);
+}
+
+#accounts-settings {
+    width: 100%;
+}
+
+#accounts-settings > #accounts-header {
+    display: flex;
+    flex-direction: row;
+
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 1em;
+
+    width: calc(100% - 2em);
+}
+
+#accounts-header > #add-account {
+    font-size: 24px;
+
+    background-color: #fff;
+    color: #000;
+
+    padding: 6px;
+    padding-bottom: 1px;
+
+    border: 0;
+    border-radius: 5px;
+
+    cursor: pointer;
+
+    transition: 0.1s;
+}
+
+#accounts-header > #add-account:hover {
+    filter: invert(1);
+}
+
+#accounts-settings > #account-list {
+    display: flex;
+    flex-direction: column;
+
+    padding: 1em;
+
+    width: calc(100% - 2em);
+    height: 30%;
+}
+
+#account-list > .account {
+    display: flex;
+    flex-direction: row;
+
+    justify-content: space-between;
+    align-items: center;
+
+    margin: 10px;
+}
+
+.account > .account-details {
+    display: flex;
+    flex-direction: row;
+}
+
+.account-details > .account-pfp-container {
+    display: flex;
+    flex-direction: row;
+
+    align-items: end;
+}
+
+.account-pfp-container > .account-pfp {
+    height: 4em;
+    object-fit: contain;
+    border-radius: 50%;
+}
+
+.account-pfp-container > .account-platform-icon {
+    position: relative;
+    left: -1.5em;
+
+    height: 1.5em;
+    object-fit: contain;
+    border-radius: 50%;
+}
+
+.account-details > .account-name-container {
+    display: flex;
+    flex-direction: column;
+
+    align-items: start;
+}
+
+.account-name-container > h3, p {
+    margin: 0;
+}
+
+.account > .account-btns > button {
+    border: none;
+    background-color: #fff;
+    color: #000;
+    border-radius: 10px;
+
+    padding: 6px;
+    padding-bottom: 4px;
+
+    cursor: pointer;
+
+    transition: 0.1s;
+}
+
+#add-account-container {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+#add-account-container > #aa-background {
+    background-color: #000;
+    opacity: 0.5;
+    width: 100%;
+    height: 100%;
+}
+
+#add-account-container > #aa-prompt {
+    position: absolute; 
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+
+    width: 30%;
+    height: fit-content;
+    
+    background-color: #fff;
+    border-radius: 20px;
+
+    padding: 1em;
+
+    display: flex;
+    flex-direction: column;
+    
+    align-items: center;
+    justify-content: space-between;
+}
+
+#aa-prompt > #platform-select-container {
+    display: flex;
+    flex-direction: row;
+}
+
+#aa-prompt > #aa-error {
+    color: #400;
+}
+
+#platform-select-container > * {
+    margin: 1em;
+}
+
+#platform-select-container > #platform-select {
+    display: flex;
+    flex-direction: row;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 5px;
+
+    appearance: none;
+    background: #ececee;
+    border: none;
+    border-radius: 5px;
+}
+
+#aa-prompt > #prompt-btns > button {
+    border: none;
+    background-color: #fff;
+    color: #000;
+    border-radius: 10px;
+    font-size: 1em;
+
+    padding: 6px;
+    padding-bottom: 4px;
+
+    cursor: pointer;
+
+    transition: 0.1s;
+}
+
+.platform-values > div {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+}
+
+.platform-values > div > input {
+    margin: 5px;
+    padding: 5px;
+
+    font-size: 1em;
+
+    background: #ececee;
+    border: none;
+    border-radius: 5px;
+}
+
+.platform-values > div > input::placeholder {
+    color: black;
+    opacity: 0.4;
+}
+
+.lds-ellipsis {
+    height: 18px;
+}
