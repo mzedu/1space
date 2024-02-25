@@ -1,6 +1,6 @@
 # 1space
 
-##Compilation
+## Compilation
 
 
 First, install the Tauri CLI by running `cargo install tauri-cli`.
